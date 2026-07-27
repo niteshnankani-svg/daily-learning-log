@@ -3,7 +3,7 @@ import { CheckIcon } from './icons/UtilityIcons.jsx';
 
 export default function RiskSection() {
   return (
-    <section id="how-we-protect-your-order" className="bg-navy-700 py-16 text-white sm:py-20" aria-labelledby="risk-heading">
+    <section id="how-we-protect-your-order" className="fabric-weave bg-navy-700 py-16 text-white sm:py-20" aria-labelledby="risk-heading">
       <div className="container-page">
         <div className="max-w-2xl">
           <p className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-khaki-400">

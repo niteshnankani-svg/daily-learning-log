@@ -42,4 +42,15 @@
   .container-page {
     @apply mx-auto w-full max-w-content px-5 sm:px-8;
   }
+
+  /* Faint diagonal weave — a quiet nod to the fabric this business runs on. */
+  .fabric-weave {
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.035) 0px,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+  }
 }

@@ -25,13 +25,13 @@ export default function CategoryGrid() {
             return (
               <article
                 key={cat.id}
-                className="flex flex-col rounded-2xl border border-navy-100 bg-white p-6 shadow-sm transition hover:shadow-md"
+                className="flex flex-col rounded-2xl border border-navy-100 bg-white p-6 shadow-sm transition duration-200 hover:border-teal-600/40 hover:shadow-lg"
               >
                 <div className="flex items-start justify-between gap-3">
-                  <div className="h-28 w-24 shrink-0">
+                  <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-xl bg-chalk-300 p-2">
                     <Figure className="h-full w-full" />
                   </div>
-                  <div className="text-right">
+                  <div className="text-right tabular-nums">
                     <p className="text-xs font-semibold uppercase tracking-wide text-navy-400">From</p>
                     <p className="font-display text-2xl font-bold text-navy-700">₹{cat.fromPrice}</p>
                     <p className="text-xs text-navy-400">per piece</p>
@@ -41,13 +41,13 @@ export default function CategoryGrid() {
                 <h3 className="mt-4 font-display text-lg font-bold text-navy-700">{cat.name}</h3>
                 <p className="mt-1 text-sm leading-relaxed text-navy-600">{cat.blurb}</p>
 
-                <dl className="mt-4 space-y-1.5 text-sm">
+                <dl className="mt-4 space-y-1.5 border-t border-chalk-300 pt-4 text-sm">
                   <div className="flex gap-2">
-                    <dt className="font-semibold text-navy-700">MOQ:</dt>
+                    <dt className="w-14 shrink-0 text-xs font-semibold uppercase tracking-wide text-navy-400">MOQ</dt>
                     <dd className="text-navy-600">{cat.moq}</dd>
                   </div>
                   <div className="flex gap-2">
-                    <dt className="font-semibold text-navy-700">Fabric:</dt>
+                    <dt className="w-14 shrink-0 text-xs font-semibold uppercase tracking-wide text-navy-400">Fabric</dt>
                     <dd className="text-navy-600">{cat.fabrics.join(', ')}</dd>
                   </div>
                 </dl>
@@ -56,7 +56,7 @@ export default function CategoryGrid() {
                   href={waLink(cat.waMessage)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-5 inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-teal-600 px-4 text-sm font-semibold text-white transition hover:bg-teal-700"
+                  className="mt-5 inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-teal-600 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-teal-700"
                 >
                   <WhatsAppIcon className="h-4 w-4" />
                   Get {cat.name.split(' ')[0]} quote
